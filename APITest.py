@@ -2,6 +2,10 @@ import requests
 import json
 import csv
 
+def build_url(url, key, apiFunction, apiParams = None):
+    if apiParams == None:
+        apiParams = {}
+
 def get_key():
     with open('./alphavantage_Key.txt', 'r') as keyFile:
         key = keyFile.readline()
