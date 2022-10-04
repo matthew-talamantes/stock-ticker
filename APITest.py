@@ -24,8 +24,7 @@ def get_active_stocks(url, key):
         decodedContent = download.content.decode('utf-8')
         cr = csv.reader(decodedContent.splitlines(), delimiter=',')
         myList = list(cr)
-        for row in myList:
-            print(row)
+    return myList
 
 #main
 url = 'https://www.alphavantage.co/query?function='
